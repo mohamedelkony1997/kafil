@@ -74,12 +74,11 @@ class _CountriesState extends State<Countries> {
                   builder: (context, state) {
                     if (state.isLoading) {
                       return SizedBox(
-                        height: MediaQuery.of(context).size.height / 1.8,
+                        height: MediaQuery.of(context).size.height / 1.6,
                         child: Center(
                             child: Lottie.asset(
                                 "assets/images/animation_llaww8kk.json",
                                 alignment: Alignment.center,
-                                
                                 animate: true,
                                 height: 200)),
                       );
@@ -87,42 +86,55 @@ class _CountriesState extends State<Countries> {
                       return Column(
                         children: [
                           SizedBox(
-                            height: MediaQuery.of(context).size.height / 1.8,
-                            child: ListView.builder(
-                              itemCount: state.countries.length,
-                              itemBuilder: (context, index) {
-                                final country = state.countries[index];
-                                return Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Wrap(
-                                    direction: Axis.horizontal,
-                                    children: [
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            country.name,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.grey[600],
-                                              fontSize: 16,
+                            height: MediaQuery.of(context).size.height / 1.7,
+                            child: Expanded(
+                              child: ListView.builder(
+                                itemCount: state.countries.length,
+                                itemBuilder: (context, index) {
+                                  final country = state.countries[index];
+                                  return Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Wrap(
+                                      direction: Axis.horizontal,
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Container(
+                                              width: 150,
+                                              child: Text(
+                                                country.name,
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.grey[600],
+                                                  fontSize: 16,
+                                                ),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 1,
+                                              ),
                                             ),
-                                          ),
-                                          Text(
-                                            country.capital,
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.grey[600],
-                                              fontSize: 16,
+                                            Container(
+                                              alignment: Alignment.centerRight,
+                                              width: 150,
+                                              child: Text(
+                                                country.capital,
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.grey[600],
+                                                  fontSize: 16,
+                                                ),
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 1,
+                                              ),
                                             ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
                             ),
                           ),
                           SizedBox(height: 10),

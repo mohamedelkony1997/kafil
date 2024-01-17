@@ -17,7 +17,7 @@ class UserRepository {
           'first_name': user.firstName,
           'last_name': user.lastName,
           'about': user.about,
-          'tags': user.tags.map((tag) => tag.toString()).join(','),
+          'tags': user.tags.map((tag) => tag).join(','),
           'favorite_social_media': user.favoriteSocialMedia.join(','),
           'salary': user.salary.toString(),
           'password': user.password,
