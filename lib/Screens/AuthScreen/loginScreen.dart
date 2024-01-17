@@ -211,7 +211,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               onPressed: () async {
                if (_formKey.currentState!.validate()) {
-                      // Form is valid, perform your login logic
+            
                       _loginCubit.login(emailCon.text, passwordCon.text);
                      
                     }
@@ -261,7 +261,7 @@ class _LoginScreenState extends State<LoginScreen> {
     Future<void> deleteSharedPreferencesKey(String key) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    // Use the remove method to delete a specific key
+ 
     prefs.remove(key);
 
     print('Key $key deleted from SharedPreferences');

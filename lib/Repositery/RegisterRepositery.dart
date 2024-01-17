@@ -1,4 +1,4 @@
-import 'dart:io';
+
 import 'package:http/http.dart' as http;
 import 'package:kafil/Models/Userdata.dart';
 import 'package:kafil/consts/basUrl.dart';
@@ -36,13 +36,13 @@ class UserRepository {
       if (response.statusCode == 200) {
         print("success");
       } else {
-        // Registration failed, handle the error
+      
         print('Registration failed. Status code: ${response.statusCode}');
         print('Response body: ${response.body}');
         throw Exception('Registration failed');
       }
     } catch (error) {
-      // Handle any network or unexpected errors
+  
       print('Error during registration: $error');
       throw Exception('Error during registration');
     }

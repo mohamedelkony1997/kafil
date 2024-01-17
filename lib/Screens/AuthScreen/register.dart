@@ -40,7 +40,7 @@ class _RegisterState extends State<Register> {
     super.initState();
 
     context.read<ApiCubit>().fetchData();
-    // Set activeStep to 0 when the widget is initialized
+   
     activeStep = 1;
   }
 
@@ -133,7 +133,7 @@ class _RegisterState extends State<Register> {
                 ],
                 onStepReached: (index) => setState(() => activeStep = index),
               ),
-              // First Step: Display 5 TextFormFields and a Button
+        
 
               Padding(
                   padding: const EdgeInsets.only(right: 8, left: 8),
@@ -433,10 +433,10 @@ class _RegisterState extends State<Register> {
                       BlocBuilder<ApiCubit, ApiState>(
                         builder: (context, state) {
                           if (state is ApiLoaded) {
-                            // Access the data using state.data
+                         
                             return DropdownButtonFormField<ApiType>(
                               value: state.data.types[
-                                  0], // Replace with the actual property in ApiData
+                                  0], 
                               isExpanded: false,
                               items: state.data.types.map((type1) {
                                 return DropdownMenuItem<ApiType>(
@@ -521,7 +521,7 @@ class _RegisterState extends State<Register> {
                       ),
                     ],
                   )),
-              // Second Step: Display 5 TextFormFields
+           
             ],
           ),
         ),

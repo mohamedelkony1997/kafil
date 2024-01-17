@@ -519,7 +519,7 @@ class _WhoIamState extends State<WhoIam> {
                             return Chip(
                               backgroundColor: lightGrey,
                               label: Text(
-                                tag.name, // Assuming 'name' is the property of Tag that contains the tag name
+                                tag.name, 
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   color: green,
@@ -527,7 +527,7 @@ class _WhoIamState extends State<WhoIam> {
                                 ),
                               ),
                               onDeleted: () {
-                                // Handle tag deletion if needed
+                            
                               },
                             );
                           }).toList(),

@@ -686,7 +686,7 @@ class _Register2State extends State<Register2> {
                             passwordConfirmation: args[4],
                           );
 
-                          // Call the registerUser method from the cubit to send the registration request
+                
                           _registrationCubit.registerUser(user);
                         },
                         child: Padding(

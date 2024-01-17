@@ -1,4 +1,3 @@
-// response_model.dart
 
 class ApiResponse {
   final int status;

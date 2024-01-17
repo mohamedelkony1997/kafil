@@ -8,7 +8,7 @@ class UserDetailCubit extends Cubit<UserDetailState> {
 
   UserDetailCubit(this.userRepositorydetails) : super(UserDetailInitial());
 
-  // Define the logic for handling events
+
   Future<void> getUserDetails() async {
     emit(UserDetailLoading());
     try {

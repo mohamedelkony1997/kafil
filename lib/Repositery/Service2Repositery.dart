@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:kafil/Models/ServicesModel2.dart';
-import 'package:kafil/Models/servicesmodel.dart';
+
 import 'package:kafil/consts/basUrl.dart';
 
 class Product2Repository {

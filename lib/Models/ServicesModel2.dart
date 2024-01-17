@@ -2,7 +2,7 @@ class Product2 {
   final int id;
   final String mainImage;
   final double price;
-  final dynamic discount; // Use dynamic to allow null
+  final dynamic discount; 
   final double priceAfterDiscount;
   final String title;
   final double averageRating;

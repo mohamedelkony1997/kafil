@@ -1,4 +1,4 @@
-import 'package:kafil/Models/Usertype.dart';
+
 
 class UserModel {
   final String firstName;

@@ -1,4 +1,4 @@
-// api_repository.dart
+
 import 'dart:convert';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -11,7 +11,7 @@ import 'package:kafil/consts/colors.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ApiRepository {
-  // Replace with your API base URL
+
 
   Future<void> loginUser(LoginRequest request) async {
     final response = await http.post(

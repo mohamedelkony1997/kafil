@@ -19,7 +19,7 @@ class UserDetailError extends UserDetailState {
   UserDetailError(this.errorMessage);
 }
 
-// Define the events for the UserDetailCubit
+
 abstract class UserDetailEvent {}
 
 class GetUserDetailsEvent extends UserDetailEvent {

@@ -3,10 +3,9 @@ import 'package:http/http.dart' as http;
 import 'package:kafil/Models/Usertype.dart';
 import 'package:kafil/consts/basUrl.dart';
 
-// api_repository.dart
 
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+
+
 
 class ApiRepository {
   Future<ApiResponse> fetchData() async {
